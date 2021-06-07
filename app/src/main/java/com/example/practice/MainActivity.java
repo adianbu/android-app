@@ -3,6 +3,7 @@ package com.example.practice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         String s = v2.getText().toString();
 
         TextView v3= findViewById(R.id.view);
-        if(v3!=null)
+        if(s!=null)
          v3.setText(s);
 
         Toast.makeText(context, "Alert",Toast.LENGTH_LONG).show();
@@ -34,5 +35,10 @@ public class MainActivity extends AppCompatActivity {
 //        v.setEnabled(false);
 //        Button button = (Button) v;
 //        button.setText("Clicked");
+    }
+
+    public void next(View v){
+        Intent i = new Intent(this,Settings.class);
+        startActivity(i);
     }
 }
